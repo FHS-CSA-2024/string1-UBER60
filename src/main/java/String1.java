@@ -50,7 +50,7 @@ public class String1
      * makeAbba("What", "Up") → "WhatUpUpWhat"
      */
     public String makeAbba(String a, String b) {
-        return unimplemented;
+        return a + b + b + a;
     }
 
     /*
@@ -62,7 +62,7 @@ public class String1
      * makeTags("cite", "Yay") → "<cite>Yay</cite>"
      */
     public String makeTags(String tag, String word) {
-        return unimplemented;
+        return "<" + tag + ">" + word + "</" + tag + ">";
     }
 
     /*
@@ -76,7 +76,9 @@ public class String1
      * makeOutWord("[[]]", "word") → "[[word]]"
      */
     public String makeOutWord(String out, String word) {
-        return unimplemented;
+        String first = out.substring(0,2);
+        String last = out.substring(2);
+        return first + word + last;
     }
 
     /*
