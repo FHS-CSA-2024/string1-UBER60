@@ -89,7 +89,9 @@ public class String1
      * extraEnd("Hi") → "HiHiHi"
      */
     public String extraEnd(String str) {
-        return unimplemented;
+        int len = str.length();
+        String repeat = str.substring(len-2);
+        return repeat + repeat + repeat;
     }
 
     /*
@@ -102,7 +104,8 @@ public class String1
      * firstTwo("ab") → "ab"
      */
     public String firstTwo(String str) {
-        return unimplemented;
+        String repeat = str.substring(0,2);
+        return repeat;
     }
 
     /*
@@ -112,7 +115,9 @@ public class String1
      * firstHalf("abcdef") → "abc"
      */
     public String firstHalf(String str) {
-        return unimplemented;
+        int len = (int) str.length() / 2;
+        String repeat = str.substring(0,len);
+        return repeat;
     }
 
     /*
@@ -123,7 +128,9 @@ public class String1
      * withoutEnd("coding") → "odin"
      */
     public String withoutEnd(String str) {
-        return unimplemented;
+        int len = str.length();
+        String ans = str.substring(1, len-2);
+        return ans;
     }
 
     /*
@@ -135,7 +142,13 @@ public class String1
      * comboString("aaa", "b") → "baaab"
      */
     public String comboString(String a, String b) {
-        return unimplemented;
+        String ans;
+        if (a.length() > b.length()){
+            ans = b + a + b;
+        }else{
+            ans = a + b + a;
+        }
+        return ans;
     }
 
     /*
@@ -146,7 +159,9 @@ public class String1
      * middleThree("solving") → "lvi"
      */
     public String middleThree(String str) {
-        return unimplemented;
+        int len = str.length()/2;
+        String ans = str.substring(len-1, len+2);
+        return ans;
     }
 
     /*
@@ -157,7 +172,16 @@ public class String1
      * extraFront("H") → "HHH"
      */
     public String extraFront(String str) {
-        return unimplemented;
+        String ans;
+        String repeat;
+        int len = str.length();
+        if (len == 1){
+            ans = str + str + str;
+        }else{
+            repeat = str.substring(0,2);
+            ans = repeat + repeat + repeat;
+        }
+        return ans;
     }
 
     /*
@@ -168,7 +192,9 @@ public class String1
      * left2("Hi") → "Hi"
      */
     public String left2(String str) {
-        return unimplemented;
+        String first = str.substring(2);
+        String last = str.substring(0,2);
+        return first + last;
     }
 
     /*
