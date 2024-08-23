@@ -206,7 +206,12 @@ public class String1
      * hasBad("xxbadxx") → false
      */
     public boolean hasBad(String str) {
-        return false;
+        int num = str.indexOf("x");
+        if (num == 0 || num == 1){
+            return true;
+        }else{
+            return false;
+        }
     }
 
     /*
@@ -218,7 +223,12 @@ public class String1
      * conCat("abc", "") → "abc"
      */
     public String conCat(String a, String b) {
-        return unimplemented;
+        String b_ = "";
+        int len = a.length();
+        if (a.substring(len-1) == b.substring(0,1)){
+            b_ = b.substring(1);
+        }
+        return a + b_;
     }
 
     /*
@@ -232,7 +242,19 @@ public class String1
      *minCat("java", "Hello") → "javaello"
      */
     public String minCat(String a, String b) {
-        return unimplemented;
+        int lenA = a.length();
+        int lenB = b.length();
+        String A = "";
+        String B = "";
+        if (lenA == lenB){
+            return a + b;
+        }else if (lenA > lenB){
+            A = a.substring(lenA-lenB);
+            return A + b;
+        }else{
+            B = b.substring(lenB-lenA);
+            return a + B;
+        }
     }
 
     /*
@@ -243,7 +265,14 @@ public class String1
      * withoutX("Hxix") → "Hxi"
      */
     public String withoutX(String str) {
-        return unimplemented;
+        int len = str.length();
+        if (str.substring(len-1) == "x"){
+            str = str.substring(0, len);
+        }
+        if (str.substring(0,1) == "x"){
+            str = str.substring(1);
+        }
+        return str;
     }
 
     /*
@@ -256,7 +285,15 @@ public class String1
      * deFront("away") → "aay"
      */
     public String deFront(String str) {    
-        return unimplemented;
+        String a = str.substring(0,1);
+        String b = str.substring(1,2);
+        if (b == "b"){
+            str = str.substring(0,1) + str.substring(2); 
+        }
+        if (a == "a"){
+            str = str.substring(1);
+        }
+        return str;
     }
 
 }
