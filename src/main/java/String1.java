@@ -266,13 +266,14 @@ public class String1
      */
     public String withoutX(String str) {
         int len = str.length();
+        String ans = str;
         if (str.substring(len-1) == "x"){
-            str = str.substring(0, len);
+            ans = str.substring(0, len-1);
         }
         if (str.substring(0,1) == "x"){
-            str = str.substring(1);
+            ans = ans.substring(1);
         }
-        return str;
+        return ans;
     }
 
     /*
@@ -287,13 +288,14 @@ public class String1
     public String deFront(String str) {    
         String a = str.substring(0,1);
         String b = str.substring(1,2);
+        String ans = str;
         if (b == "b"){
-            str = str.substring(0,1) + str.substring(2); 
+            ans = str.substring(0,1) + str.substring(2); 
         }
         if (a == "a"){
-            str = str.substring(1);
+            str = ans.substring(1);
         }
-        return str;
+        return ans;
     }
 
 }
