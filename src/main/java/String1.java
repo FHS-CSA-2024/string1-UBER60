@@ -290,11 +290,14 @@ public class String1
         String b = str.substring(1,2);
         String ans = str;
         if (b == "b"){
-            ans = str.substring(0,1) + str.substring(2); 
+            ans = ans; 
+        }else{
+            ans = str.substring(0,1) + str.substring(2);
         }
         if (a == "a"){
-            str = ans.substring(1);
-        }
+            ans = ans;
+        }else{
+            ans = ans.substring(1);
         return ans;
     }
 
