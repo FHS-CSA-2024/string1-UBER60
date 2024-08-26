@@ -267,10 +267,10 @@ public class String1
     public String withoutX(String str) {
         int len = str.length();
         String ans = str;
-        if (str.substring(len-1) == "x"){
+        if (str.substring(len-1).equals("x")){
             ans = str.substring(0, len-1);
         }
-        if (str.substring(0,1) == "x"){
+        if (str.substring(0,1).equals("x")){
             ans = ans.substring(1);
         }
         return ans;
@@ -289,12 +289,12 @@ public class String1
         String a = str.substring(0,1);
         String b = str.substring(1,2);
         String ans = str;
-        if (b == "b"){
+        if (b.equals("b")){
             ans = ans; 
         }else{
             ans = str.substring(0,1) + str.substring(2);
         }
-        if (a == "a"){
+        if (a.equals("a")){
             ans = ans;
         }else{
             ans = ans.substring(1);
