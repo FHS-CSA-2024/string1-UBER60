@@ -129,7 +129,7 @@ public class String1
      */
     public String withoutEnd(String str) {
         int len = str.length();
-        String ans = str.substring(1, len-2);
+        String ans = str.substring(1, len-1);
         return ans;
     }
 
@@ -206,7 +206,7 @@ public class String1
      * hasBad("xxbadxx") → false
      */
     public boolean hasBad(String str) {
-        int num = str.indexOf("x");
+        int num = str.indexOf("bad");
         if (num == 0 || num == 1){
             return true;
         }else{
@@ -225,8 +225,10 @@ public class String1
     public String conCat(String a, String b) {
         String b_ = "";
         int len = a.length();
-        if (a.substring(len-1) == b.substring(0,1)){
+        if (a.substring(len-1).equals(b.substring(0,1))){
             b_ = b.substring(1);
+        }else{
+            b_ = b;
         }
         return a + b_;
     }
