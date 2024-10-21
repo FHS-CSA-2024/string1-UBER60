@@ -14,7 +14,7 @@ import org.junit.jupiter.api.Test;
  */
 public class TestString1
 {
-    private String1 testStrings = new String1();
+    String1 testStrings = new String1();
 
     @Test
     public void helloNameTest(){
